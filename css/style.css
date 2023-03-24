@@ -800,7 +800,7 @@ section .container
 {
     display: grid;
 
-    min-height: 483px;
+    min-height: 504px;
     margin-top: 51px;
 
     grid-template-columns: repeat(4, 1fr);
