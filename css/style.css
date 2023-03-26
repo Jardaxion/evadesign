@@ -822,7 +822,6 @@ section .container
 {
     position: relative;
 
-    height: 100%;
     max-height: 352px;
 }
 .cost__packet-img
@@ -1826,13 +1825,15 @@ section .container
     }
     .hello__text
     {
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 14px;
+        line-height: 20px;
 
         max-width: none;
         margin-bottom: 51px;
 
         text-align: center;
+
+        text-transform: uppercase;
     }
     .hello__buttons
     {
@@ -1891,10 +1892,6 @@ section .container
         grid-template-columns: repeat(1, 1fr);
         gap: 23px;
     }
-    .cost__packet
-    {
-        height: 462px;
-    }
     .cost__hr{
         display: none;
     }
@@ -1908,6 +1905,7 @@ section .container
     }
     .cost__packet-title{
         text-transform: uppercase;
+        font-size: 20px;
     }
     .cost__packet:last-of-type,
     .cost__packet:nth-of-type(3)
