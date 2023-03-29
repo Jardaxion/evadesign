@@ -68,6 +68,11 @@ $(document).ready(() => {
         mask: '+{7} (000) 000-00-00'
     })
 
+    //Маска на телефон в форме модалки
+    new IMask(document.getElementById('phoneModal'), {
+        mask: '+{7} (000) 000-00-00'
+    })
+
     //Отправка формы
     $('.form__form').on('submit', function(e){
         e.preventDefault();
@@ -81,9 +86,97 @@ $(document).ready(() => {
             }
         });
     })
+
+    //Отправка формы
+    $('.modal__form').on('submit', function(e){
+        e.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "/email.php",
+            data: $(this).serialize(),
+            success: function (response) {
+                reOpenModal("thanks");
+            }
+        });
+    })
+
+    let slider = new Swiper('.reviews__slider-wrapper', {
+        slidesPerView: 1,
+        spaceBetween: 31,
+        navigation: {
+            nextEl: '.reviews__rightArrow',
+            prevEl: '.reviews__leftArrow'
+        },
+        pagination: {
+            el: '.reviews__pagination',
+            clickable: true
+        },
+        breakpoints: {
+            960: {
+                slidesPerView: 4
+            }
+        }
+    })
+
+    //Модальные окна
+    //Открытие
+    $('.js-open-modal').on('click', function(e){
+        e.preventDefault();
+
+        if($('.js-open-desktop-menu').hasClass('reverse')){
+            openCloseMenu();
+        }
+
+        if($('.js-open-mobile-menu').hasClass('reverse')){
+            openCloseMobMenu();
+        }
+
+        openModal($(this).data('modal'));
+    })
+    //Закрытие
+    $('.js-close-modal').on('click', function(e){
+        e.preventDefault();
+
+        closeModal();
+    })
+    $('.modal').on('click', function(e){
+
+        if(e.target === document.querySelector('.modal')){
+            closeModal();
+        }
+
+    })
+    //Переоткрытие
+    $('.js-reOpen-modal').on('click', function(e){
+        e.preventDefault();
+
+        reOpenModal($(this).data('modal'));
+    })
 });
 
 
 function setLikes(line){
     line.children().next().html(line.data('likes'));
+}
+
+//Модальные окна
+//Открытие
+function openModal(id){
+    $('.modal#'+id).addClass('active');
+    $('.modal__background').addClass('active');
+    $('body').addClass('noScroll');
+}
+
+//Закрытие
+function closeModal() {
+    $('.modal.active').removeClass('active');
+    $('.modal__background').removeClass('active');
+    $('body').removeClass('noScroll');
+}
+
+//Закрытие одного модального окна и открытие другого
+function reOpenModal(id) {
+    $('.modal.active').removeClass('active');
+    $('.modal#'+id).addClass('active');
 }
