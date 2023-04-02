@@ -254,6 +254,8 @@ main
 {
     max-width: 100%;
     min-height: 46.4vh;
+
+    padding-top: 76px;
 }
 
 .container
@@ -288,7 +290,7 @@ section .container
 .modal
 {
     position: fixed;
-    z-index: 3;
+    z-index: 13;
     top: 0;
     left: 0;
 
@@ -415,7 +417,7 @@ section .container
 .modal__background
 {
     position: fixed;
-    z-index: 2;
+    z-index: 12;
     top: 0;
     left: 0;
 
@@ -585,10 +587,25 @@ section .container
 /* Хедер */
 .header
 {
-    position: relative;
-    z-index: 2;
+    position: fixed;
+    z-index: 10;
 
     padding-top: 41px;
+
+    width: 100%;
+
+    transition: .5s ease all;
+
+    padding-bottom: 41px;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+.header.dontShow{
+    transform: translateY(0);
+    opacity: 1;
+}
+.header.bg{
+    background: white;
 }
 .header__inner
 {

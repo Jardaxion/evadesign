@@ -1,3 +1,5 @@
+let lastScrollTop = 0;
+
 $(document).ready(() => {
     //Инициализация анимации при скролле
     AOS.init();
@@ -13,6 +15,23 @@ $(document).ready(() => {
         $(this).toggleClass('active');
         $('.header__menu').toggleClass('active');
         $('body').toggleClass('noScroll');
+    })
+
+    $(window).scroll(() => {
+        let st = $(window).scrollTop();
+
+        if(st > 100){
+            $('header').addClass('bg');
+        } else {
+            $('header').removeClass('bg');
+        }
+        
+        if (st > lastScrollTop){
+            $('header').removeClass('dontShow');
+        } else {
+           $('header').addClass('dontShow');
+        }
+        lastScrollTop = st;
     })
 
     $('.header__menu a').on('click', function(e){
