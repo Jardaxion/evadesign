@@ -15,6 +15,12 @@ $(document).ready(() => {
         $('body').toggleClass('noScroll');
     })
 
+    $('.header__menu a').on('click', function(e){
+        $('.header__buttonMenu').toggleClass('active');
+        $('.header__menu').toggleClass('active');
+        $('body').toggleClass('noScroll');
+    })
+
     //Открытие\закрытие всех услуг на мобилке
     $('.cost__all').on('click', function(e){
         e.preventDefault();
@@ -26,7 +32,7 @@ $(document).ready(() => {
         if($('.cost__packet:last-of-type').hasClass('active')){
             $(this).html('Скрыть');
         } else{
-            $(this).html('Все пакеты');
+            $(this).html('Смотреть все');
         }
     })
 
@@ -118,7 +124,6 @@ $(document).ready(() => {
             }
         }
     })
-
     //Модальные окна
     //Открытие
     $('.js-open-modal').on('click', function(e){
