@@ -8,6 +8,7 @@ $(document).ready(() => {
     $('.clients__inner').marquee({
         duration: 15000,
         startVisible: true,
+        duplicated: true
     })
 
     //Мобильное меню
@@ -16,6 +17,12 @@ $(document).ready(() => {
         $('.header__menu').toggleClass('active');
         $('body').toggleClass('noScroll');
     })
+
+    if($(window).scrollTop() > 100){
+        $('header').addClass('bg');
+    } else {
+        $('header').removeClass('bg');
+    }
 
     $(window).scroll(() => {
         let st = $(window).scrollTop();
@@ -30,6 +37,10 @@ $(document).ready(() => {
             $('header').removeClass('dontShow');
         } else {
            $('header').addClass('dontShow');
+        }
+
+        if(st == 0){
+            $('header').addClass('dontShow');
         }
         lastScrollTop = st;
     })
@@ -102,12 +113,16 @@ $(document).ready(() => {
     $('.form__form').on('submit', function(e){
         e.preventDefault();
 
+        let ntf = new Notyf({
+            duration: 5000
+        });
+
         $.ajax({
             type: "POST",
             url: "/email.php",
             data: $(this).serialize(),
             success: function (response) {
-                console.log(response.data);
+                ntf.success("Форма была отправлена, ожидайте ответа в ближайшее время");
             }
         });
     })

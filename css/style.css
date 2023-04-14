@@ -950,13 +950,16 @@ section .container
 }
 .cost__content
 {
-    display: grid;
+    /* display: grid; */
+
+    display: flex;
+    justify-content: center;
 
     min-height: 504px;
     margin-top: 51px;
 
-    grid-template-columns: repeat(4, 1fr);
-    gap: 19px;
+    /* grid-template-columns: repeat(4, 1fr);
+    gap: 19px; */
 }
 .cost__packet
 {
@@ -964,6 +967,9 @@ section .container
 
     border: 1px solid #e6e6e6;
     background: white;
+}
+.cost__packet:not(:last-of-type){
+    margin-right: 19px;
 }
 .cost__packet:hover .cost__packet-effect,
 .cost__packet:hover .cost__packet-on
@@ -1427,7 +1433,7 @@ section .container
 .portfolio__sidePan
 {
     z-index: 2;
-    top: 40%;
+    top: 30%;
 }
 
 /* Отзывы */
@@ -1914,10 +1920,29 @@ section .container
 {
     .container
     {
-        padding: 0 52px;
+        padding: 0 80px;
+    }
+    .hello{
+        overflow: hidden;
+    }
+    .hello__circleRight{
+        right: -262px;
+    }
+    .hello__heartRight{
+        right: 82px;
+    }
+
+}
+@media(max-width: 1366px){
+    .hello__heartRight{
+        right: 20px;
+    }
+
+    .state__heart{
+        right: 512px;
     }
 }
-@media (max-width: 960px)
+@media (max-width: 1024px)
 {
     .mobile
     {
