@@ -72,7 +72,7 @@ $(document).ready(() => {
 
         $('.portfolio__block:last-of-type').slideToggle();
         $('.portfolio__block:last-of-type').toggleClass('active');
-        $('.portfolio__block:nth-of-type(5)').slideToggle();
+        $('.portfolio__block:not(:eq(1))').slideToggle();
 
         if($('.portfolio__block:last-of-type').hasClass('active')){
             $(this).html('Скрыть');

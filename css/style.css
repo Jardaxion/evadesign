@@ -2348,7 +2348,7 @@ section .container
         grid-column: 1;
         grid-row: 1;
     }
-    .portfolio__block:nth-of-type(5),
+    .portfolio__block:not(:nth-of-type(1)),
     .portfolio__block:last-of-type
     {
         display: none;
