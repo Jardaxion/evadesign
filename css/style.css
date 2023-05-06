@@ -725,7 +725,7 @@ section .container
 {
     margin-right: 25px;
 }
-.header__social:nth-of-type(2)
+.header__social:nth-of-type(3)
 {
     margin-right: 61px;
 }
@@ -1654,8 +1654,12 @@ section .container
 
 .contacts__text{
     color: #4F4943;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 26px;
+}
+
+.contacts__text:last-of-type{
+    margin-left: 10px;
 }
 
 .contacts__img{
@@ -1913,6 +1917,17 @@ section .container
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+.footer__adress{
+    font-family: 'Futura';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #c7c3c1;
+    margin-bottom: 30px;
 }
 
 /* Адаптация */
