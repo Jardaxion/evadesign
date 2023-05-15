@@ -5,11 +5,18 @@ $(document).ready(() => {
     AOS.init();
 
     //Прокручиваемая строка с картиками
-    $('.clients__inner').marquee({
+    let marquee = $('.clients__inner').marquee({
         duration: 15000,
         startVisible: true,
         duplicated: true
     })
+
+    $('.clients__client').on('mouseover', () => {
+        marquee.marquee('pause');
+    });
+    $('.clients__client').on('mouseout', () => {
+        marquee.marquee('resume');
+    });
 
     //Мобильное меню
     $('.header__buttonMenu').on('click', function(){
