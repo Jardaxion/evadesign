@@ -6,7 +6,7 @@ $(document).ready(() => {
 
     //Прокручиваемая строка с картиками
     let marquee = $('.clients__inner').marquee({
-        duration: 15000,
+        duration: 10000,
         startVisible: true,
         duplicated: true
     })

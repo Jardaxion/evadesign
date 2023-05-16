@@ -485,6 +485,22 @@ section .container
 
     color: white;
     background: #1e1e1e;
+
+
+    position: relative;
+    overflow-x: hidden;
+}
+.button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    transform: skewX(-45deg);
+    animation: flareAnimation;
+    left: -150%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flareAnimation 3s infinite linear;
 }
 .button:hover
 {
@@ -617,6 +633,14 @@ section .container
 
     to{
         box-shadow: 0 0 3px black;
+    }
+}
+@keyframes flareAnimation {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
     }
 }
 .heartAnim
@@ -1856,7 +1880,20 @@ section .container
     -ms-flex-align: center;
     align-items: center;
 
-    animation: blur infinite 1.2s;
+    position: relative;
+    overflow-x: hidden;
+}
+.form__button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    transform: skewX(-45deg); 
+    animation: flareAnimation;
+    left: -150%;
+    background: linear-gradient(90deg, rgba(75, 73, 73, 0.199), rgb(85, 85, 85));
+    animation: flareAnimation 3s infinite linear;
 }
 .form__button:hover
 {
@@ -1927,6 +1964,8 @@ section .container
 .footer__button
 {
     padding: 15px 58px;
+    max-width: 350px;
+    text-align: center;
 }
 .footer__text
 {
@@ -2136,6 +2175,7 @@ section .container
     .hello
     {
         margin-top: 45px;
+        margin-bottom: 19px;
     }
     .hello__inner
     {
@@ -2490,7 +2530,8 @@ section .container
     }
     .form
     {
-        height: 557px;
+        height: auto;
+        padding: 35px 0;
     }
     .form__background
     {
@@ -2505,9 +2546,6 @@ section .container
         margin-bottom: 44px;
 
         text-align: center;
-    }
-    .form {
-        height: 615px;
     }
     .form__inner{
         margin-top: 4px;
@@ -2609,6 +2647,9 @@ section .container
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
+    }
+    .footer__button{
+        max-width: none;
     }
     .footer__center,
     .footer__right
