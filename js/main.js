@@ -6,16 +6,17 @@ $(document).ready(() => {
 
     //Прокручиваемая строка с картиками
     let marquee = $('.clients__inner').marquee({
-        duration: 10000,
-        startVisible: true,
+        duration: 12000,
         duplicated: true
     })
 
-    $('.clients__client').on('mouseover', () => {
+    $('.clients__client').on('mouseover', function() {
         marquee.marquee('pause');
+        $(this).attr('src', $(this).attr('src').replace('.svg', 'Grey.svg'));
     });
-    $('.clients__client').on('mouseout', () => {
+    $('.clients__client').on('mouseout', function() {
         marquee.marquee('resume');
+        $(this).attr('src', $(this).attr('src').replace('Grey.svg', '.svg'));
     });
 
     //Мобильное меню
