@@ -77,9 +77,8 @@ $(document).ready(() => {
     $('.portfolio__all').on('click', function(e){
         e.preventDefault();
 
-        $('.portfolio__block:last-of-type').slideToggle();
         $('.portfolio__block:last-of-type').toggleClass('active');
-        $('.portfolio__block:not(:eq(1))').slideToggle();
+        $('.portfolio__block:not(.first)').slideToggle();
 
         if($('.portfolio__block:last-of-type').hasClass('active')){
             $(this).html('Скрыть');

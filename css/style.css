@@ -1689,10 +1689,6 @@ section .container
     line-height: 26px;
 }
 
-.contacts__text:last-of-type{
-    margin-left: 10px;
-}
-
 .contacts__img{
     max-width: 670px;
     max-height: 531px;
@@ -2023,8 +2019,10 @@ section .container
         position: relative;
         z-index: 101;
     }
-    .header__social:nth-of-type(2)
-    {
+    .header__social:nth-of-type(2){
+        margin-right: 10px !important;
+    }
+    .header__social:nth-of-type(3){
         margin-right: 0;
     }
     .header__buttonMenu
@@ -2250,13 +2248,13 @@ section .container
         margin-top: 43px;
 
         grid-template-columns: repeat(1, 1fr);
-        gap: 7px;
+        gap: 15px;
     }
     .cost__hr{
         display: none;
     }
     .cost__packet-img{
-        max-height: 19vh;
+        height: 213px;
     }
     .cost__title{
         width: 100%;
@@ -2269,6 +2267,7 @@ section .container
     .cost__packet-title{
         text-transform: uppercase;
         font-size: 20px;
+        margin-bottom: 15px;
     }
     .cost__packet-size{
         display: none;
@@ -2298,7 +2297,8 @@ section .container
         gap: 23px;
     }
     .cost__packet{
-        height: 278px;
+        /* height: 278px; */
+        padding-bottom: 10px;
     }
     .cost__packet:not(:last-of-type){
         margin-right: 0;
@@ -2388,8 +2388,7 @@ section .container
         grid-column: 1;
         grid-row: 1;
     }
-    .portfolio__block:not(:nth-of-type(1)),
-    .portfolio__block:last-of-type
+    .portfolio__block:not(.first)
     {
         display: none;
     }
@@ -2507,6 +2506,12 @@ section .container
 
         text-align: center;
     }
+    .form {
+        height: 615px;
+    }
+    .form__inner{
+        margin-top: 4px;
+    }
     .form__subText
     {
         font-size: 32px;
@@ -2549,6 +2554,10 @@ section .container
     .contacts{
         margin-top: 65px;
         margin-bottom: 0;
+    }
+
+    .contacts__text{
+        max-width: 174px;
     }
 
     .contacts .container{
