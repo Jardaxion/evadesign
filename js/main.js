@@ -4,6 +4,18 @@ $(document).ready(() => {
     //Инициализация анимации при скролле
     AOS.init();
 
+    $('.button').each(function() {
+        let width = $(this).width() + Number(116);
+        let height = $(this).height() + Number(30);
+        let newTag = $(`
+            <svg viewBox="0 0 ${width} ${height}" class="border">
+                <polyline points="${width} ${height} 1,8 1,1 ${width}" class="bg-line" />
+                <polyline points="${width} ${height} 1,59 1,1 ${width}" class="hl-line" />
+            </svg>`);
+        $(this).append(newTag);
+        console.log($(this).width());
+    })
+
     //Прокручиваемая строка с картиками
     let marquee = $('.clients__inner').marquee({
         duration: 12000,
