@@ -485,26 +485,12 @@ section .container
 
     color: white;
     background: #1e1e1e;
-
-
-    position: relative;
-    overflow-x: hidden;
-}
-.button::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 45px;
-    transform: skewX(-45deg);
-    animation: flareAnimation;
-    left: -150%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
-    animation: flareAnimation 3s infinite linear;
+    animation: brownBlur 1.2s infinite;
 }
 .button:hover
-{
+{   
     background: #4d3e36;
+    animation: darkBlur .5s infinite;
 }
 
 .buttonNB
@@ -609,38 +595,56 @@ section .container
                 transform: translateY(5px);
     }
 }
-@keyframes blur{
+@keyframes whiteBlur{
     from {
-        box-shadow: 0 0 3px white;
+        box-shadow: 0 0 10px white;
     }
 
     50%{
-        box-shadow: 0 0 7px white;
+        box-shadow: 0 0 14px white;
     }
 
     to{
-        box-shadow: 0 0 3px white;
+        box-shadow: 0 0 10px white;
     }
 }
 @keyframes darkBlur {
     from {
-        box-shadow: 0 0 3px black;
+        box-shadow: 0 0 10px black;
     }
 
     50%{
-        box-shadow: 0 0 7px black;
+        box-shadow: 0 0 14px black;
     }
 
     to{
-        box-shadow: 0 0 3px black;
+        box-shadow: 0 0 10px black;
     }
 }
-@keyframes flareAnimation {
-    0% {
-        left: -150%;
+@keyframes brownBlur{
+    from {
+        box-shadow: 0 0 10px #1e1e1e;
     }
-    100% {
-        left: 150%;
+
+    50%{
+        box-shadow: 0 0 14px #1e1e1e;
+    }
+
+    to{
+        box-shadow: 0 0 10px #1e1e1e;
+    }
+}
+@keyframes darkBlur{
+    from {
+        box-shadow: 0 0 14px #4d3e36;
+    }
+
+    50%{
+        box-shadow: 0 0 10px #4d3e36;
+    }
+
+    to{
+        box-shadow: 0 0 14px #4d3e36;
     }
 }
 .heartAnim
@@ -1880,20 +1884,7 @@ section .container
     -ms-flex-align: center;
     align-items: center;
 
-    position: relative;
-    overflow-x: hidden;
-}
-.form__button::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 45px;
-    transform: skewX(-45deg); 
-    animation: flareAnimation;
-    left: -150%;
-    background: linear-gradient(90deg, rgba(75, 73, 73, 0.199), rgb(85, 85, 85));
-    animation: flareAnimation 3s infinite linear;
+    animation: whiteBlur infinite 1.2s;
 }
 .form__button:hover
 {
