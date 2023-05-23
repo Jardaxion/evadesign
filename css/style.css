@@ -475,8 +475,8 @@ section .container
 {
     --width: auto;
     --height: auto;
-    --strokedashwayWidth: 70px;
-    --strokedashwayHeight: 210px;
+    --strokedashwayWidth: 412px;
+    --strokedashwayHeight: 303px;
     font-family: 'Futura';
     font-size: 20px;
     font-weight: 400;
@@ -489,7 +489,7 @@ section .container
 
     color: white;
     background: #1e1e1e;
-    /* animation: brownBlur 1.2s infinite; */
+    animation: brownBlur 1.2s infinite;
     position: relative;
 }
 .button__svg,
@@ -514,10 +514,10 @@ section .container
 }
 @keyframes anim {
     from{
-        stroke-dashoffset: 280;
+        stroke-dashoffset: 400;
     }
     to{
-        stroke-dashoffset: -270;
+        stroke-dashoffset: -300;
     }
 }
 .button:hover
@@ -941,20 +941,19 @@ section .container
 }
 .hello__button{
     padding: 15px 58px;
-    max-width: 350px;
     text-align: center;
-    --strokedashwayWidth: 161px;
-    --strokedashwayHeight: 360px;
+    --strokedashwayWidth: 284px;
+    --strokedashwayHeight: 187px;
 }
 .hello__button rect{
     animation: animHello 2s infinite linear;
 }
 @keyframes animHello {
     from{
-        stroke-dashoffset: 270;
+        stroke-dashoffset: 250;
     }
     to{
-        stroke-dashoffset: -250;
+        stroke-dashoffset: -230;
     }
 }
 .hello__buttons
