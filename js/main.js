@@ -5,12 +5,9 @@ $(document).ready(() => {
     AOS.init();
 
     $('.button').each(function() {
-        let width = $(this).width() + Number(116);
-        let height = $(this).height() + Number(30);
         let newTag = $(`
-            <svg viewBox="0 0 ${width} ${height}" class="border">
-                <polyline points="${width} ${height} 1,8 1,1 ${width}" class="bg-line" />
-                <polyline points="${width} ${height} 1,59 1,1 ${width}" class="hl-line" />
+            <svg class="button__svg">
+                <rect class="button__rect"></rect>
             </svg>`);
         $(this).append(newTag);
         console.log($(this).width());

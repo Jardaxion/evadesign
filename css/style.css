@@ -473,6 +473,10 @@ section .container
 /* Кнопка */
 .button
 {
+    --width: auto;
+    --height: auto;
+    --strokedashwayWidth: 70px;
+    --strokedashwayHeight: 210px;
     font-family: 'Futura';
     font-size: 20px;
     font-weight: 400;
@@ -488,25 +492,32 @@ section .container
     /* animation: brownBlur 1.2s infinite; */
     position: relative;
 }
-.button svg{
+.button__svg,
+.button__rect{
     position: absolute;
-    left: 0;
     top: 0;
-    fill: none;
-    stroke: #fff;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
+    left: 0;
     width: 100%;
     height: 100%;
-    animation: anim 1.5s ease-in-out infinite;
+    fill: none;
+}
+.button__rect{
+    stroke: white;
+    stroke-width: 5;
+    stroke-dasharray: var(--strokedashwayWidth) var(--strokedashwayHeight);
+    stroke-dashoffset: calc(
+        2 * var(--width) +
+        2 * var(--height) +
+        var(--height) / 2
+    );
+    animation: anim infinite 2s linear;
 }
 @keyframes anim {
     from{
-        stroke-dashoffset: 150;
+        stroke-dashoffset: 280;
     }
     to{
-        stroke-dashoffset: -480;
+        stroke-dashoffset: -270;
     }
 }
 .button:hover
@@ -927,6 +938,24 @@ section .container
     text-align: justify;
 
     color: #84786c;
+}
+.hello__button{
+    padding: 15px 58px;
+    max-width: 350px;
+    text-align: center;
+    --strokedashwayWidth: 161px;
+    --strokedashwayHeight: 360px;
+}
+.hello__button rect{
+    animation: animHello 2s infinite linear;
+}
+@keyframes animHello {
+    from{
+        stroke-dashoffset: 270;
+    }
+    to{
+        stroke-dashoffset: -250;
+    }
 }
 .hello__buttons
 {
@@ -1904,14 +1933,17 @@ section .container
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-
-    animation: whiteBlur infinite 1.2s;
 }
 .form__button:hover
 {
     color: white;
     background: black;
-    animation: darkBlur infinite 1.2s;
+}
+.form__button rect{
+    stroke: black;
+}
+.form__button:hover rect{
+    stroke: white;
 }
 
 /* Клиенты */
