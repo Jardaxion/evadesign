@@ -2745,5 +2745,10 @@ section .container
         width: auto;
     }
 }
+@media(max-width: 420px){
+	.hello__button{
+		font-size: 16px;
+	}
+}
 
 /*# sourceMappingURL=style.css.map */
