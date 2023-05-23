@@ -2077,6 +2077,10 @@ section .container
     .state__heart{
         right: 512px;
     }
+	.hello__button{
+	padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 @media (max-width: 1024px)
 {
