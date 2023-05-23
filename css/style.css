@@ -491,7 +491,7 @@ section .container
     background: #1e1e1e;
     animation: brownBlur 1.2s infinite;
     position: relative;
-	border: 5px solid white;
+	border: 2px solid white;
 }
 .button__svg,
 .button__rect{
@@ -630,54 +630,58 @@ section .container
 }
 @keyframes whiteBlur{
     from {
-        box-shadow: 0 0 10px white;
+        border-color: white;
     }
-
-    50%{
-        box-shadow: 0 0 14px white;
-    }
+	
+	50%{
+		border-color: transparent;
+	}
+	
 
     to{
-        box-shadow: 0 0 10px white;
+        border-color: white;
     }
 }
 @keyframes darkBlur {
     from {
-        box-shadow: 0 0 10px black;
+        border-color: black;
     }
-
-    50%{
-        box-shadow: 0 0 14px black;
-    }
+	
+	50%{
+		border-color: transparent;
+	}
+	
 
     to{
-        box-shadow: 0 0 10px black;
+        border-color: black;
     }
 }
 @keyframes brownBlur{
     from {
-        box-shadow: 0 0 10px #1e1e1e;
+        border-color: white;
     }
-
-    50%{
-        box-shadow: 0 0 14px #1e1e1e;
-    }
+	
+	50%{
+		border-color: transparent;
+	}
+	
 
     to{
-        box-shadow: 0 0 10px #1e1e1e;
+        border-color: white;
     }
 }
 @keyframes darkBlur{
     from {
-        box-shadow: 0 0 14px #4d3e36;
+        border-color: black;
     }
-
-    50%{
-        box-shadow: 0 0 10px #4d3e36;
-    }
+	
+	50%{
+		border-color: transparent;
+	}
+	
 
     to{
-        box-shadow: 0 0 14px #4d3e36;
+        border-color: black;
     }
 }
 .heartAnim
