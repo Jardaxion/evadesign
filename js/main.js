@@ -4,14 +4,14 @@ $(document).ready(() => {
     //Инициализация анимации при скролле
     AOS.init();
 
-    $('.button').each(function() {
-        let newTag = $(`
-            <svg class="button__svg">
-                <rect class="button__rect"></rect>
-            </svg>`);
-        $(this).append(newTag);
-        console.log($(this).width());
-    })
+    
+   
+        
+         
+ 
+
+
+
 
     //Прокручиваемая строка с картиками
     let marquee = $('.clients__inner').marquee({
