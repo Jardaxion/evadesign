@@ -491,6 +491,7 @@ section .container
     background: #1e1e1e;
     animation: brownBlur 1.2s infinite;
     position: relative;
+	border: 5px solid white;
 }
 .button__svg,
 .button__rect{
@@ -1932,12 +1933,14 @@ section .container
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    animation: infinite 1.2s linear whiteBlur; 
+    animation: infinite 1.2s linear whiteBlur;
+	border: 5px solid black;
 }
 .form__button:hover
 {
     color: white;
     background: black;
+	border-color: white;
     animation: infinite 1.2s linear darkBlur; 
 }
 .form__button rect{
