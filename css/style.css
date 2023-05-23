@@ -1938,7 +1938,7 @@ section .container
     -ms-flex-align: center;
     align-items: center;
     animation: infinite 1.2s linear whiteBlur;
-	border: 5px solid black;
+	border: 3px solid black;
 }
 .form__button:hover
 {
