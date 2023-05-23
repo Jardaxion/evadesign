@@ -630,7 +630,7 @@ section .container
 }
 @keyframes whiteBlur{
     from {
-        border-color: white;
+        border-color: black;
     }
 	
 	50%{
@@ -639,12 +639,12 @@ section .container
 	
 
     to{
-        border-color: white;
+        border-color: black;
     }
 }
 @keyframes darkBlur {
     from {
-        border-color: black;
+        border-color: white;
     }
 	
 	50%{
@@ -653,7 +653,7 @@ section .container
 	
 
     to{
-        border-color: black;
+        border-color: white;
     }
 }
 @keyframes brownBlur{
@@ -672,7 +672,7 @@ section .container
 }
 @keyframes darkBlur{
     from {
-        border-color: black;
+        border-color: white;
     }
 	
 	50%{
@@ -681,7 +681,7 @@ section .container
 	
 
     to{
-        border-color: black;
+        border-color: white;
     }
 }
 .heartAnim
