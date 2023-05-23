@@ -1932,11 +1932,13 @@ section .container
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    animation: infinite 1.2s linear whiteBlur; 
 }
 .form__button:hover
 {
     color: white;
     background: black;
+    animation: infinite 1.2s linear darkBlur; 
 }
 .form__button rect{
     stroke: black;
