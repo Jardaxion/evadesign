@@ -489,9 +489,9 @@ section .container
 
     color: white;
     background: #1e1e1e;
-    animation: brownBlur 1.2s infinite;
+    animation: brownBlur 2s infinite;
     position: relative;
-	border: 2px solid white;
+	border: 3px solid white;
 }
 .button__svg,
 .button__rect{
