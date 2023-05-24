@@ -408,6 +408,7 @@ section .container
     justify-content: center;
     width: 330px;
     background: #E3327A !important;
+    font-size: 14px !important;
 }
 .modal__button:hover{
     background: #52122b !important;
@@ -1098,7 +1099,8 @@ section .container
 {
     width: 100%;
     height: 100%;
-    max-height: 332px;
+    height: 332px;
+    max-width: 335px;
 
     -o-object-fit: cover;
        object-fit: cover;
@@ -2351,6 +2353,7 @@ section .container
     }
     .cost__packet-img{
         height: 213px;
+        max-width: none;
     }
     .cost__title{
         width: 100%;
@@ -2706,6 +2709,7 @@ section .container
     }
     .footer__button{
         max-width: none;
+        width: 100%;
     }
     .footer__button {
         font-size: 14px;
@@ -2723,6 +2727,7 @@ section .container
     }
     .footer__center
     {
+        width: 100%;
         margin-bottom: 40px;
     }
     .footer__left
