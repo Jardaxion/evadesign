@@ -2725,6 +2725,9 @@ section .container
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
     }
+    .footer__right{
+        width: 100%;
+    }
     .footer__center
     {
         width: 100%;
